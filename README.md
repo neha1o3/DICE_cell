@@ -24,8 +24,21 @@ Fig. 1. The DICE Memory Cell
 The four nodes Xo...X3 store the data as two pairs of complementary values (i.e., 1010 or 0101) which are simultaneously accessed using transmission gates for write or read operation. Two opposite feedback loops are formed, one is the P-transistor loop, P0…P3 other is N- transistor loop, N3…N0. If we consider logic state 0 as X0…X3=0101, then N0, P1, N2 and P3 are in conduction., blocking the other transistors, and storing the same data. For logic state 1, X0…X3=1010, N1, P2, N3 and P0 are in conduction, performing the latch function in similar manner. 
 
 Proof: A negative upset pulse at a node 𝑋i(i=0…3) will induce a positive pulse perturbation at node 𝑋(i+1) through transistor P(i+1). But this will not be able to affect logic stored at 𝑋(i-1) since 𝑁(i-1) is blocked by the negative upset pulse. Hence the positive perturbation at node 𝑋(i+1) is not further transmitted. This perturbation is removed after the upset transient, restoring the correct logic state. A similar analysis can be done for positive transient upset pulse. This shows that whatever electrical charge collected at the perturbed node, the cell recovers its initial state. 
-## Reference_Circuit
 
+## Reference_Circuit
+Two compact latch configurations using the DICE storage cell are to be implemented. Latches works like a storage device by holding the data through a feedback lane and only passing the input signal during active clock. The circuits mentioned here are positive level triggered hence when clock=0, 'Latch mode' is on, and for clock=1, 'Transparent mode' is activated. The two latch configurations are transmission gate and clock inverter latch circuit.
+
+![image](https://user-images.githubusercontent.com/100678578/156198365-7a6ed35b-3fa5-49f6-a20b-2751bf44e2d9.png)
+
+Fig. 2. Transmission gate latch circuit using the DICE cell
+
+The above shown latch configuration can be used as master and slave sections in edge-triggered flip flop circuits, allowing to optimize their operating speed, power dissipation and silicon area. 
+
+![image](https://user-images.githubusercontent.com/100678578/156198443-8ab033a2-7715-4ca8-98c2-cce9d4662807.png)F
+
+Fig. 3. Clocked inverter latch circuit using the DICE cell
+
+Alterntively, clocked inverters can be used to further reduce power dissipation.
 
 ## Tools_Used
 - Synopsys Custom Compiler
