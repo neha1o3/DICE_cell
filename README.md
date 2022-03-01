@@ -4,8 +4,8 @@ This repository presents the design of transmission gate latch circuit and clock
 - [Introduction](#introduction)
 - [Working](#working)
 - [Reference_Circuit](#reference_circuit)
+- [Tools_Used](#tools_used)
 - [Implementation](#implementation)
-- [Schematic_Netlist_Waveform](#schematic_netlist_waveform)
 - [Simulation_Results](#simulation_results)
 - [Netlist](#netlist)
 - [Author](#author)
@@ -24,9 +24,17 @@ Fig. 1. The DICE Memory Cell
 The four nodes Xo...X3 store the data as two pairs of complementary values (i.e., 1010 or 0101) which are simultaneously accessed using transmission gates for write or read operation. Two opposite feedback loops are formed, one is the P-transistor loop, P0…P3 other is N- transistor loop, N3…N0. If we consider logic state 0 as X0…X3=0101, then N0, P1, N2 and P3 are in conduction., blocking the other transistors, and storing the same data. For logic state 1, X0…X3=1010, N1, P2, N3 and P0 are in conduction, performing the latch function in similar manner. 
 
 Proof: A negative upset pulse at a node 𝑋i(i=0…3) will induce a positive pulse perturbation at node 𝑋(i+1) through transistor P(i+1). But this will not be able to affect logic stored at 𝑋(i-1) since 𝑁(i-1) is blocked by the negative upset pulse. Hence the positive perturbation at node 𝑋(i+1) is not further transmitted. This perturbation is removed after the upset transient, restoring the correct logic state. A similar analysis can be done for positive transient upset pulse. This shows that whatever electrical charge collected at the perturbed node, the cell recovers its initial state. 
-## Reference Circuit
+## Reference_Circuit
+
+
+## Tools_Used
+- Synopsys Custom Compiler
+- Synopsys Primewave 
+- Synopsys 28nm PDK
 
 ## Implementation
+The schematic and testbench are implemented using Synopsys Custom Compiler and 28nm technology node is used.
+
 The schematic of Transmission gate latch circuit using DICE cell is made of 4 pmos and 6 nmos. D and CLK pins are taken as the inputs and Q and Q_bar pins are the outputs of the circuit. 
 
 ![image](https://user-images.githubusercontent.com/100678578/156182972-c1ee181d-ebd6-411f-a637-d4707d0acbff.png)
@@ -52,10 +60,10 @@ Fig. 7. Clocked inverter latch circuit testbench
 Primewave is used for the simulation of the circuits. Transient analysis is performed for both the circuits and the time duration for the analysis is 20us with 1us as the time step.
 
 ![image](https://user-images.githubusercontent.com/100678578/156172817-3f51364c-8f4e-4fda-a85d-ab7d18bae8df.png)
-Fig.6. Transmission gate latch circuit using DICE cell transient analysis
+Fig.8. Transmission gate latch circuit using DICE cell transient analysis
 
 ![image](https://user-images.githubusercontent.com/100678578/156173061-40a8914c-70d6-422a-a603-c172b7ce7098.png)
-Fig.7. Clocked inverter latch circuit using DICE cell transient analysis
+Fig.9. Clocked inverter latch circuit using DICE cell transient analysis
 
 ## Netlist
 The netlist of the Transmission Gate Latch Circuit using DICE cell is as follows.
