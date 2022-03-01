@@ -6,7 +6,7 @@ This repository presents the design of transmission gate latch circuit and clock
 - [Reference_Circuit](#reference_circuit)
 - [Implementation](#implementation)
 - [Schematic_Netlist_Waveform](#schematic_netlist_waveform)
-- [Methodology](#methodology)
+- [Simulation Results](#simulation results)
 - [Netlist](#netlist)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
@@ -25,11 +25,16 @@ The four nodes Xo...X3 store the data as two pairs of complementary values (i.e.
 
 Proof: A negative upset pulse at a node 𝑋i(i=0…3) will induce a positive pulse perturbation at node 𝑋(i+1) through transistor P(i+1). But this will not be able to affect logic stored at 𝑋(i-1) since 𝑁(i-1) is blocked by the negative upset pulse. Hence the positive perturbation at node 𝑋(i+1) is not further transmitted. This perturbation is removed after the upset transient, restoring the correct logic state. A similar analysis can be done for positive transient upset pulse. This shows that whatever electrical charge collected at the perturbed node, the cell recovers its initial state. 
 ## Reference Circuit
-![image](https://user-images.githubusercontent.com/100678578/156172125-9f22c027-d5a7-4e17-94ee-fba826614d42.png)
-![image](https://user-images.githubusercontent.com/100678578/156172817-3f51364c-8f4e-4fda-a85d-ab7d18bae8df.png)
-![image](https://user-images.githubusercontent.com/100678578/156173061-40a8914c-70d6-422a-a603-c172b7ce7098.png)
 
-![image](https://user-images.githubusercontent.com/100678578/156171366-cdad20dd-dcb1-4ded-b238-082bab16a87d.png)
+
+## Simulation Results
+Primewave is used for the simulation of the circuits. Transient analysis is performed for both the circuits and the time duration for the analysis is 20us with 1us as the time step.
+
+![image](https://user-images.githubusercontent.com/100678578/156172817-3f51364c-8f4e-4fda-a85d-ab7d18bae8df.png)
+Fig.6. Transmission gate latch circuit using DICE cell transient analysis
+
+![image](https://user-images.githubusercontent.com/100678578/156173061-40a8914c-70d6-422a-a603-c172b7ce7098.png)
+Fig.7. Clocked inverter latch circuit using DICE cell transient analysis
 
 ## Netlist
 The netlist of the Transmission Gate Latch Circuit using DICE cell is as follows.
