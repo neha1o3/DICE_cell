@@ -59,7 +59,7 @@ The amplitude of the input pulse 'D' is set to 1V with 0.01us as the rising and 
 ![image](https://user-images.githubusercontent.com/100678578/156183859-2f0b43b8-9cee-4edb-b28b-13d77d6bfe38.png)
 Fig. 5. Transmission gate latch circuit testbench
 
-The schematic and testbench properties of clocked inverter latch circuit using DICE cell are similar to that of Transmission gate latch circuit except it has an addition 'CLK_bar' signal, which is obtained by inverting the 'CLK' signal.
+The schematic and testbench properties of clocked inverter latch circuit using DICE cell are similar to that of Transmission gate latch circuit except it has an additional 'CLK_bar' signal, which is obtained by inverting the 'CLK' signal.
 
 ![image](https://user-images.githubusercontent.com/100678578/156185410-276c378f-78ac-45e3-8420-f8bf7b93b0aa.png)
 
