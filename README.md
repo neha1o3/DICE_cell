@@ -1,5 +1,5 @@
 # Dual Interlocked Storage Cell
-This repository presents the design of transmission gate latch circuit and clocked inverter latch circuit using the DICE (Dual Interlocked Storgae Cell). These designs are implemented on Synopsys Custom Compiler in 28nm technology node.
+This repository presents the design of transmission gate latch circuit and clocked inverter latch circuit using the DICE (Dual Interlocked Storage Cell). These designs are implemented on Synopsys Custom Compiler in 28nm technology node.
 ## Table of Contents 
 - [Introduction](#introduction)
 - [Working](#working)
