@@ -7,10 +7,7 @@ This repository presents the design of transmission gate latch circuit and clock
 - [Implementation](#implementation)
 - [Schematic_Netlist_Waveform](#schematic_netlist_waveform)
 - [Methodology](#methodology)
-- [Challenge](#challenge)
-- [Troubleshooting](#troubleshooting)
-- [Reproduce_waveforms](#reproduce_waveforms)
-- [Limitations](#limitations)
+- [Netlist](#netlist)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 - [References](#references)
@@ -28,9 +25,11 @@ The four nodes Xo...X3 store the data as two pairs of complementary values (i.e.
 
 Proof: A negative upset pulse at a node 𝑋i(i=0…3) will induce a positive pulse perturbation at node 𝑋(i+1) through transistor P(i+1). But this will not be able to affect logic stored at 𝑋(i-1) since 𝑁(i-1) is blocked by the negative upset pulse. Hence the positive perturbation at node 𝑋(i+1) is not further transmitted. This perturbation is removed after the upset transient, restoring the correct logic state. A similar analysis can be done for positive transient upset pulse. This shows that whatever electrical charge collected at the perturbed node, the cell recovers its initial state. 
 ## Reference Circuit
+## Netlist
+Netlist of the Clocked Inverter Latch Circuit can be found [here](
 ## Author
 [Neha Sharma](https://www.linkedin.com/in/neha-sharma-7b19531b7), B.Tech(EE), Indian Institute of Technology Jammu, Jammu, India
--  Contact: [nesharma1003@gmail.com](nesharma1003@gmail.com)
+-  Contact: nesharma1003@gmail.com
 ## Acknowledgements
 - [Cloud Based Analog IC Design Hackathon](https://hackathoniith.in/)
 - [Synopsys India](https://www.synopsys.com/)
