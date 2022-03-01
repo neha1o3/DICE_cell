@@ -38,7 +38,7 @@ The above shown latch configuration can be used as master and slave sections in 
 
 Fig. 3. Clocked inverter latch circuit using the DICE cell
 
-Alterntively, clocked inverters can be used to further reduce power dissipation.
+Alternatively, clocked inverters can be used to further reduce power dissipation.
 
 ## Tools_Used
 - Synopsys Custom Compiler
