@@ -6,7 +6,7 @@ This repository presents the design of transmission gate latch circuit and clock
 - [Reference_Circuit](#reference_circuit)
 - [Implementation](#implementation)
 - [Schematic_Netlist_Waveform](#schematic_netlist_waveform)
-- [Simulation Results](#simulation results)
+- [Simulation_Results](#simulation_results)
 - [Netlist](#netlist)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
@@ -26,8 +26,29 @@ The four nodes Xo...X3 store the data as two pairs of complementary values (i.e.
 Proof: A negative upset pulse at a node 𝑋i(i=0…3) will induce a positive pulse perturbation at node 𝑋(i+1) through transistor P(i+1). But this will not be able to affect logic stored at 𝑋(i-1) since 𝑁(i-1) is blocked by the negative upset pulse. Hence the positive perturbation at node 𝑋(i+1) is not further transmitted. This perturbation is removed after the upset transient, restoring the correct logic state. A similar analysis can be done for positive transient upset pulse. This shows that whatever electrical charge collected at the perturbed node, the cell recovers its initial state. 
 ## Reference Circuit
 
+## Implementation
+The schematic of Transmission gate latch circuit using DICE cell is made of 4 pmos and 6 nmos. D and CLK pins are taken as the inputs and Q and Q_bar pins are the outputs of the circuit. 
 
-## Simulation Results
+![image](https://user-images.githubusercontent.com/100678578/156182972-c1ee181d-ebd6-411f-a637-d4707d0acbff.png)
+
+Fig. 4. Schematic of Transmission gate latch circuit 
+
+The amplitude of the input pulse 'D' is set to 1V with 0.01us as the rising and falling time and 4us period. 'CLK' pulse is similar to 'D' but with 2.4us as the time period.
+
+![image](https://user-images.githubusercontent.com/100678578/156183859-2f0b43b8-9cee-4edb-b28b-13d77d6bfe38.png)
+Fig. 5. Transmission gate latch circuit testbench
+
+The schematic and testbench properties of clocked inverter latch circuit using DICE cell are similar to that of Transmission gate latch circuit except it has an addition 'CLK_bar' signal, which is obtained by inverting the 'CLK' signal.
+
+![image](https://user-images.githubusercontent.com/100678578/156185410-276c378f-78ac-45e3-8420-f8bf7b93b0aa.png)
+
+Fig. 6. Clocked inverter latch circuit schematic
+
+![image](https://user-images.githubusercontent.com/100678578/156185693-14672617-a2bd-411b-8748-e245731962c2.png)
+
+Fig. 7. Clocked inverter latch circuit testbench
+
+## Simulation_Results
 Primewave is used for the simulation of the circuits. Transient analysis is performed for both the circuits and the time duration for the analysis is 20us with 1us as the time step.
 
 ![image](https://user-images.githubusercontent.com/100678578/156172817-3f51364c-8f4e-4fda-a85d-ab7d18bae8df.png)
